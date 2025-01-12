@@ -67,3 +67,9 @@ Bonus features include a simple frontend boostrapped with create-react-app and t
     > Note: The proxied connection will only work locally.
     > You'll need the server to serve the frontend build if
     > you want to host the entire project somewhere.
+
+## Node and dependencies versions
+
+- Node: v8.17.0
+- Yarn: 1.17.3
+- Knex: 0.17.6
