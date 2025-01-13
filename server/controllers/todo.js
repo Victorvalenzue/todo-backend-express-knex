@@ -10,7 +10,7 @@ function createToDo(req, data) {
     title: data.title,
     order: data.order,
     completed: data.completed || false,
-    url: `${protocol}://${host}/${id}`,
+    url: `${protocol}://${host}/todos/${id}`,
   };
 }
 

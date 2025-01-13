@@ -3,6 +3,7 @@ exports.up = function (knex) {
     .createTable("organizations", function (table) {
       table.increments("id").primary();
       table.string("name").notNullable();
+      table.timestamps(true, true);
     })
     .createTable("users", function (table) {
       table.increments("id").primary();
@@ -15,6 +16,7 @@ exports.up = function (knex) {
         .references("id")
         .inTable("organizations")
         .onDelete("CASCADE");
+      table.timestamps(true, true);
     })
     .createTable("projects", function (table) {
       table.increments("id").primary();
@@ -26,6 +28,7 @@ exports.up = function (knex) {
         .references("id")
         .inTable("organizations")
         .onDelete("CASCADE");
+      table.timestamps(true, true);
     })
     .createTable("tasks", function (table) {
       table.increments("id").primary();
@@ -37,6 +40,7 @@ exports.up = function (knex) {
         .references("id")
         .inTable("projects")
         .onDelete("CASCADE");
+      table.timestamps(true, true);
     })
     .createTable("comments", function (table) {
       table.increments("id").primary();
@@ -53,6 +57,7 @@ exports.up = function (knex) {
         .references("id")
         .inTable("tasks")
         .onDelete("CASCADE");
+      table.timestamps(true, true);
     })
     .createTable("task_assignments", function (table) {
       table
